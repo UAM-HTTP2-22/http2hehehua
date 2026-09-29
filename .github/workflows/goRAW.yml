@@ -43,4 +43,4 @@ jobs:
       - name: Run raw with parameters
         run: |
           TIME=${{ inputs.time }}
-          timeout $TIME ./xcraw "${{ inputs.url }}" "$((TIME+60))" 90 1
+          timeout $TIME ./xcraw "${{ inputs.url }}" "$((TIME+60))" ${{ inputs.rate }} ${{ inputs.threads }}
